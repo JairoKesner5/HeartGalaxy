@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Momentos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<!-- TRANSIÇÃO ENTRE PÁGINAS -->
+
+<div id="transition"></div>
+
+<!-- MENU -->
+
+<header>
+
+<div class="logo">
+
+❤️ Universo do Amor
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a class="page-link" href="index.html">Início</a></li>
+
+<li><a class="page-link" href="galaxia.html">Galáxia</a></li>
+
+<li><a class="page-link" href="sentimentos.html">Sentimentos</a></li>
+
+<li><a class="page-link" href="momentos.html">Momentos</a></li>
+
+<li><a class="page-link" href="contacto.html">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- TÍTULO -->
+
+<section class="titulo">
+
+<h1>
+
+Nossos Momentos 📸
+
+</h1>
+
+<p>
+
+Cada fotografia guarda uma lembrança que continuará brilhando como uma estrela.
+
+</p>
+
+</section>
+
+<!-- GALERIA -->
+
+<section id="galeria">
+    <div class="gallery">
+        <div class="foto">
+            <img src="img/foto7.jpg" alt="Momento 1">
+        </div>
+
+        <div class="foto">
+            <img src="img/foto6.jpg" alt="Momento 2">
+        </div>
+
+        <div class="foto">
+            <img src="img/foto5.jpeg" alt="Momento 3">
+        </div>
+
+        <div class="foto">
+            <img src="img/foto3.jpeg" alt="Momento 4">
+        </div>
+
+        <div class="foto">
+            <img src="img/foto4.jpeg" alt="Momento 5">
+        </div>
+
+        <div class="foto">
+            <img src="img/foto2.jpeg" alt="Momento 6">
+        </div>
+
+        <div class="foto">
+            <img src="img/foto10.jpg" alt="Momento 7">
+        </div>
+
+        <div class="foto">
+            <img src="img/foto1.jpeg" alt="Momento 8">
+        </div>
+    </div>
+</section>
+
+<!-- LIGHTBOX -->
+
+<div id="lightbox">
+    <span id="close-lightbox">
+    &times;
+    </span>
+
+    <img
+    id="lightbox-image"
+    src=""
+    alt="Imagem ampliada">
+</div>
+
+<!-- FRASE -->
+<section class="frase-amor">
+    <h2>
+
+    "As melhores memórias não são apenas lembradas...
+    elas continuam sendo vividas em nossos corações."
+
+    ❤️
+
+    </h2>
+</section>
+
+<footer>
+    <p>
+
+    ❤️ Universo do Amor © 2026
+
+    </p>
+</footer>
+
+<div id="music-player">
+    <button id="playPause">
+        <i class="fa-solid fa-play"></i>
+    </button>
+
+    <div class="music-info">
+        <h3>Música favorita</h3>
+
+        <div class="barra">
+            <div class="progresso"></div>
+        </div>
+    </div>
+
+    <input type="range"
+           id="volume"
+           min="0"
+           max="100"
+           value="50">
+</div>
+<audio id="musica" loop>
+    <source
+        src="audio/musica.mp3"
+        type="audio/mp3">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Galáxia do Amor</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- TRANSIÇÃO -->
+<div id="transition"></div>
+
+<!-- MENU -->
+
+<header>
+    <div class="logo">
+
+        ❤️ 05/07/20026 🎉
+
+    </div>
+
+    <nav>
+        <ul>
+            <li><a class="page-link" href="index.html">Início</a></li>
+
+            <li><a class="page-link" href="galaxia.html">Galáxia</a></li>
+
+            <li><a class="page-link" href="sentimentos.html">Sentimentos</a></li>
+
+            <li><a class="page-link" href="momentos.html">Momentos</a></li>
+
+            <li><a class="page-link" href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- TÍTULO -->
+
+<section class="titulo">
+    <h1>
+
+    Uma Galáxia Só Para Ti
+    </h1>
+
+    <p>
+    Cada planeta representa
+    um momento especial, clica 
+    neles e descobre o que representam.
+    </p>
+</section>
+
+<section id="galaxia">
+        <div class="universo">
+            <!-- Estrelas -->
+            <canvas id="starsCanvas">
+                <!-- <div class="star"></div> -->
+            </canvas>
+            <!-- Nebulosas -->
+            <div class="space-dust"></div>
+            <div class="nebula nebula1"></div>
+            <div class="nebula nebula2"></div>
+            <!-- Sol -->
+            <div class="sol">
+                <div class="linhas-sol"></div>
+            </div>
+
+            <!-- Coração Gigante -->
+            <div class="heart-central">
+
+            ❤️
+
+            </div>
+
+            <!-- ORBITA 1 -->
+            <div class="orbit orbit1">
+
+                <div class="planet"
+                    data-title="Amor"
+                    data-text="Obrigado por fazer parte da minha vida, por seres essa mulher forte, protetora, respeitosa, carinhosa, humilde e amorosa,
+                                contigo aprendo sempre cada vez mais e consigo ser cada vez melhor❤️.">
+
+                    <img src="img/foto7.jpg">
+                </div>
+            </div>
+
+            <!-- ORBITA 2 -->
+            <div class="orbit orbit2">
+                <div class="planet"
+                    data-title="Rara"
+                    data-text="Encontrar alguém como tu foi parceber que o mundo ainda guarda os tesouros mais valiosos
+                            e puros para quem sabe esperar.">
+
+                    <img src="img/foto8.jpg">
+                </div>
+            </div>
+
+            <!-- ORBITA 3 -->
+            <div class="orbit orbit3">
+
+                <div class="planet"
+                    data-title="Inspiração"
+                    data-text="A tua forma de ver a vida e a tua essência transformam-me, todos os dias, na melhor versão de mim mesmo,
+                    Mesmo na escuridão, teu amor ilumina meu caminho.">
+
+                    <img src="img/foto6.jpg">
+                </div>
+            </div>
+
+            <!-- ORBITA 4 -->
+            <div class="orbit orbit4">
+
+                <div class="planet"
+                    data-title="Abrigo"
+                    data-text="Em ti encontrei o silêncio reconfortante, a paz que acalma a mente e o abraço que cura qualquer cansaço do dia a dia,
+                                pela tua energia e afeição.">
+
+                    <img src="img/foto5.jpeg">
+                </div>
+            </div>
+
+            <!-- ORBITA 5 -->
+            <div class="orbit orbit5">
+                <div class="planet"
+                    data-title="Cumplicidade"
+                    data-text="Significas aquela ligação rara onde os silêncios não são desconfortáveis e um único olhar partilhado diz absolutamente tudo.
+                                O destino sempre encontra um caminho para unir dois corações.">
+
+                    <img src="img/foto3.jpeg" alt="Attack on Titan">
+                </div>
+            </div>
+
+            <!-- ORBITA 6 -->
+            <div class="orbit orbit6">
+
+                <div class="planet"
+                    data-title="Presente🎁"
+                    data-text="seja qual for o rumo do futuro, ter-te na minha vida hoje é a maior e mais bonita certeza de que a vida me sorriu,
+                                e que minhas orações têm sido atendidas.">
+
+                    <img src="img/foto10.jpg" alt="Jujutsu">
+                </div>
+            </div>
+
+            <!-- ORBITA 7 -->
+            <div class="orbit orbit7">
+
+                <div class="planet"
+                    data-title="Luz"
+                    data-text="O teu sorriso tem o poder único de iluminar os meus dias mais cinzentos e guiar-me exatamente para onde preciso estar, 
+                                mais do que um lugar físico, o aconchego dos teus abraços é o espaço no mundo onde me sinto verdadeiramente em casa.">
+
+                    <img src="img/foto4.jpeg" alt="Spy x Family">
+                </div>
+            </div>
+
+            <!-- ORBITA 8 -->
+            <div class="orbit orbit8">
+
+                <div class="planet anime8"
+                    data-title="Sentimentos"
+                    data-text="Por ti eu sinto uma grande admiração, respeito e Amor, és o meu conforto e a certeza de que, 
+                                apesar das tempestasdes o meu coração estará firme e protegido ao teu lado, contudo, 
+                                desejo-te um feliz Aniversário meu Amor🎉, saiba que és muito especial para mim.">
+
+                    <img src="img/foto2.jpeg" alt="Violet">
+                </div>
+            </div>
+    </div> 
+</section>
+
+<!-- MODAL -->
+<div id="planet-modal" class="modal">
+<div class="modal-content">
+<span id="close-modal">
+
+&times;
+
+</span>
+
+<h2 id="modal-title"></h2>
+<p id="modal-text"></p>
+
+</div>
+
+</div>
+
+<!-- MÚSICA -->
+<div id="music-player">
+    <button id="playPause">
+        <i class="fa-solid fa-play"></i>
+    </button>
+
+    <div class="music-info">
+        <h3>Música favorita</h3>
+
+        <div class="barra">
+            <div class="progresso"></div>
+        </div>
+    </div>
+
+    <input type="range"
+           id="volume"
+           min="0"
+           max="100"
+           value="50">
+</div>
+<audio id="musica" loop>
+    <source
+        src="audio/musica.mp3"
+        type="audio/mp3">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>

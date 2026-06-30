@@ -1,0 +1,1307 @@
+/* =====================================================
+   UNIVERSO DO AMOR
+   STYLE.CSS
+===================================================== */
+
+/* ===========================
+   RESET
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#030303;
+    color:white;
+    overflow-x:hidden;
+    min-height:100vh;
+}
+
+/* ===========================
+   VARIÁVEIS
+=========================== */
+:root{
+--rosa:#ff4da6;
+--rosa2:#ff7ec8;
+--roxo:#8b5cf6;
+--azul:#4f9cff;
+--dourado:#ffd54f;
+--branco:#ffffff;
+--preto:#030303;
+--glass:rgba(255,255,255,.08);
+--glass2:rgba(255,255,255,.12);
+}
+
+/* ===========================
+   FUNDO
+=========================== */
+body{
+background:
+radial-gradient(circle at top,#43113f 0%,#15091d 20%,#050505 65%,#000 100%);
+}
+
+/* =====================================================
+   TELA INICIAL
+===================================================== */
+#loading-screen{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:black;
+z-index:999999;
+transition:1s;
+}
+
+.loading-content{
+text-align:center;
+}
+
+.loading-content h1{
+font-size:55px;
+font-weight:800;
+margin-top:25px;
+background:linear-gradient(90deg,#ff7ec8,#ffffff,#ffd54f);
+-webkit-background-clip:text;
+background-clip: text;
+}
+
+.loading-content p{
+margin-top:20px;
+font-size:18px;
+color:#cccccc;
+}
+
+/* BOTÃO */
+#btn-entrar{
+margin-top:45px;
+padding:18px 55px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:linear-gradient(90deg,var(--rosa),var(--roxo));
+color:white;
+transition:.4s;
+box-shadow:0 0 35px rgba(255,0,170,.45);
+}
+
+.hero-button{
+display:inline-block;
+padding:18px 55px;
+border-radius:50px;
+text-decoration:none;
+background:linear-gradient(90deg, var(--rosa),var(--roxo));
+color:white;
+font-size:18px;
+font-weight:600;
+transition:.4s;
+box-shadow:0 0 25px rgba(255,0,170,.4);
+}
+
+#btn-entrar:hover{
+transform:translateY(-5px);
+box-shadow:0 0 45px rgba(255,0,170,.7);
+}
+
+/* =====================================================
+   CORAÇÃO
+===================================================== */
+.heart-loader{
+width:130px;
+height:130px;
+margin:auto;
+background:var(--rosa);
+transform:rotate(-45deg);
+animation:pulse 2s infinite;
+position:relative;
+}
+
+.heart-loader::before{
+content:"";
+position:absolute;
+width:130px;
+height:130px;
+border-radius:50%;
+background:var(--rosa);
+top:-65px;
+left:0;
+}
+
+.heart-loader::after{
+content:"";
+position:absolute;
+width:130px;
+height:130px;
+border-radius:50%;
+background:var(--rosa);
+left:65px;
+}
+
+/*=========================
+        HEADER
+=========================*/
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.18);
+backdrop-filter:blur(20px);
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:white;
+}
+
+/*=========================
+        MENU
+=========================*/
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.35s;
+position:relative;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+bottom:-5px;
+left:0;
+width:0;
+height:2px;
+background:var(--rosa);
+transition:.35s;
+}
+
+nav a:hover{
+color:var(--rosa2);
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+/* =====================================================
+   PLAYER
+===================================================== */
+#music-player{
+position:fixed;
+right:25px;
+bottom:25px;
+width:320px;
+padding:13px;
+border-radius:25px;
+background:var(--glass);
+backdrop-filter:blur(20px);
+display:flex;
+align-items:center;
+gap:15px;
+z-index:999;
+}
+
+#playPause{
+width:40px;
+height:40px;
+border-radius:50%;
+border:none;
+background:linear-gradient(135deg,var(--rosa),var(--roxo));
+color:white;
+cursor:pointer;
+font-size:18px;
+}
+
+.music-info{
+flex:1;
+}
+
+.music-info h3{
+font-size:16px;
+margin-bottom:10px;
+}
+
+.barra{
+width:100%;
+height:8px;
+background:#333;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progresso{
+width:0;
+height:100%;
+background:linear-gradient(90deg,var(--rosa),var(--dourado));
+}
+
+#volume{
+width:80px;
+}
+
+/*=========================
+        TRANSIÇÃO
+=========================*/
+#transition{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+opacity:0;
+pointer-events:none;
+transition:.7s;
+z-index:999999;
+}
+
+#transition.active{
+opacity:1;
+pointer-events:auto;
+}
+
+/*=========================
+        HERO
+=========================*/
+.hero{
+height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+text-align:center;
+padding:0 10%;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:90px;
+font-weight:800;
+margin-bottom:25px;
+background:linear-gradient(90deg, var(--rosa),white, var(--dourado));
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+font-size:22px;
+line-height:38px;
+color:#ddd;
+margin-bottom:45px;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+.hero-left{
+max-width:650px;
+}
+
+.hero-left span{
+font-size:20px;
+color:#ddd;
+}
+
+.hero-left h1{
+margin-top:15px;
+font-size:80px;
+line-height:90px;
+font-weight:800;
+}
+
+.hero-left strong{
+color:var(--rosa2);
+}
+
+.hero-left p{
+margin-top:30px;
+font-size:20px;
+line-height:35px;
+color:#d6d6d6;
+}
+
+.hero-button{
+margin-top:40px;
+padding:20px 60px;
+border:none;
+border-radius:60px;
+font-size:20px;
+cursor:pointer;
+background:linear-gradient(90deg,var(--rosa),var(--roxo));
+color:white;
+transition:.4s;
+}
+
+.hero-button:hover{
+transform:scale(1.08);
+box-shadow:0 0 45px rgba(255,0,170,.7);
+}
+
+/*=========================
+        TÍTULOS
+=========================*/
+.titulo{
+padding-top:140px;
+padding-bottom:60px;
+text-align:center;
+}
+
+.titulo h1{
+font-size:60px;
+margin-bottom:20px;
+background:linear-gradient(90deg, var(--rosa), var(--dourado));
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.titulo p{
+font-size:20px;
+color:#d4d4d4;
+max-width:700px;
+margin:auto;
+line-height:34px;
+}
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
+
+@keyframes pulse{
+    0%{
+    transform:rotate(-45deg) scale(1);
+    }
+    50%{
+    transform:rotate(-45deg) scale(1.12);
+    }
+    100%{
+    transform:rotate(-45deg) scale(1);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+.hero,
+.titulo{
+    animation:fadeUp 1.2s;
+}
+
+/* =====================================================
+                GALÁXIA
+=====================================================*/
+#galaxia{
+    position:relative;
+    width:100%;
+    min-height: 100vh;
+    height:120vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    /*background:radial-gradient(circle at center, rgba(255,70,170,.08), transparent 45%);*/
+    background: radial-gradient(circle at center, #1c0c31 0%, #0b0618 70%, #050312 100%);
+}
+
+/* =====================================================
+            UNIVERSO
+=====================================================*/
+.universo{
+    position:relative;
+    width:900px;
+    height:900px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    perspective: 1200px;
+    margin: auto;
+    transform-style: preserve-3d;
+    transform-origin: center;
+}
+
+/* =====================================================
+          ESPIRAL GALÁCTICA
+=====================================================*/
+.universo::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+    /* =========================
+       25 ESTRELAS PRÓXIMAS DO CENTRO
+    ========================== */
+    radial-gradient(2px 2px at 280px 260px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1.5px 1.5px at 320px 240px, rgba(255,255,255,.8), transparent),
+    radial-gradient(1px 1px at 350px 300px, rgba(255,255,255,.7), transparent),
+    radial-gradient(2px 2px at 260px 320px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1.5px 1.5px at 310px 340px, rgba(255,255,255,.8), transparent),
+    radial-gradient(1px 1px at 290px 280px, rgba(255,255,255,.6), transparent),
+    radial-gradient(2px 2px at 330px 270px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1.5px 1.5px at 370px 310px, rgba(255,255,255,.8), transparent),
+    radial-gradient(1px 1px at 240px 290px, rgba(255,255,255,.7), transparent),
+    radial-gradient(2px 2px at 300px 360px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 340px 380px, rgba(255,255,255,.6), transparent),
+    radial-gradient(1.5px 1.5px at 380px 260px, rgba(255,255,255,.8), transparent),
+    radial-gradient(1px 1px at 260px 250px, rgba(255,255,255,.7), transparent),
+    radial-gradient(2px 2px at 310px 310px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1.5px 1.5px at 295px 325px, rgba(255,255,255,.8), transparent),
+    radial-gradient(1px 1px at 275px 345px, rgba(255,255,255,.6), transparent),
+    radial-gradient(2px 2px at 360px 340px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 390px 300px, rgba(255,255,255,.7), transparent),
+    radial-gradient(1.5px 1.5px at 250px 310px, rgba(255,255,255,.8), transparent),
+    radial-gradient(2px 2px at 330px 290px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 285px 260px, rgba(255,255,255,.6), transparent),
+    radial-gradient(1.5px 1.5px at 315px 285px, rgba(255,255,255,.8), transparent),
+    radial-gradient(1px 1px at 345px 330px, rgba(255,255,255,.7), transparent),
+    radial-gradient(2px 2px at 300px 270px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 320px 350px, rgba(255,255,255,.6), transparent),
+
+    /* =========================
+       25 ESTRELAS MAIS AFASTADAS
+    ========================== */
+    radial-gradient(2px 2px at 50px 80px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 120px 40px, rgba(255,255,255,.7), transparent),
+    radial-gradient(1.5px 1.5px at 500px 60px, rgba(255,255,255,.8), transparent),
+    radial-gradient(2px 2px at 580px 120px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 420px 30px, rgba(255,255,255,.6), transparent),
+    radial-gradient(1.5px 1.5px at 80px 500px, rgba(255,255,255,.8), transparent),
+    radial-gradient(2px 2px at 150px 520px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 600px 400px, rgba(255,255,255,.7), transparent),
+    radial-gradient(1.5px 1.5px at 520px 480px, rgba(255,255,255,.8), transparent),
+    radial-gradient(2px 2px at 30px 300px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 70px 200px, rgba(255,255,255,.6), transparent),
+    radial-gradient(1.5px 1.5px at 200px 600px, rgba(255,255,255,.8), transparent),
+    radial-gradient(2px 2px at 400px 580px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 550px 250px, rgba(255,255,255,.7), transparent),
+    radial-gradient(1.5px 1.5px at 450px 450px, rgba(255,255,255,.8), transparent),
+    radial-gradient(2px 2px at 100px 150px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 300px 20px, rgba(255,255,255,.6), transparent),
+    radial-gradient(1.5px 1.5px at 620px 320px, rgba(255,255,255,.8), transparent),
+    radial-gradient(2px 2px at 260px 560px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 480px 520px, rgba(255,255,255,.7), transparent),
+    radial-gradient(1.5px 1.5px at 10px 10px, rgba(255,255,255,.8), transparent),
+    radial-gradient(2px 2px at 640px 640px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1px 1px at 200px 100px, rgba(255,255,255,.6), transparent),
+    radial-gradient(1.5px 1.5px at 380px 200px, rgba(255,255,255,.8), transparent),
+    radial-gradient(2px 2px at 500px 500px, rgba(255,255,255,.9), transparent);
+
+    background-repeat: repeat;
+    background-size: 600px 600px;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: estrelas 120s linear infinite;
+    z-index: 0;
+}
+
+.universo .space-dust{
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at 30% 30%, 
+        radial-gradient rgba(255, 255, 255, 0.03), transparent 60%),
+        radial-gradient (Cicle at 70% 70%, rgba(70% 70%, 255, 255, 255, 0.02) transparent 60%);
+    animation: dust 200s linear infinite;
+}
+
+.universo::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(3px 3px at 20px 30px, rgba(255, 255, 255,0.9), transparent),
+        radial-gradient(2px 2px at 90px 120px, rgba(255, 255, 255, 0.9), transparent),
+        radial-gradient(2.5px 2.5px at 500px 100px, rgba(255, 255, 255,0.9), transparent),
+        radial-gradient(3px 3px at 80px 300px, rgba(255, 255, 255,0.9), transparent),
+        radial-gradient(2px 2px at 450px 350px,   rgba(255, 255, 255,0.9), transparent);
+    background-repeat: no-repeat;
+    animation: twinkling 4s infinite ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#starsCanvas{
+position:absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+pointer-events:none;
+display: block;
+z-index: 0;
+}
+.star{
+position:absolute;
+left: 200px;
+top: 150px;
+width: 5px;
+height: 5px;
+border-radius: 50%;
+background: white;
+box-shadow: 0 0 8px white;
+}
+
+/* =====================================================
+            NEBULOSAS
+=====================================================*/
+.nebula {
+position:absolute;
+border-radius:50%;
+filter:blur(120px);
+opacity:.35;
+animation:nebulaMove 18s ease-in-out infinite;
+pointer-events:none;
+}
+
+.nebula1 {
+width:420px;
+height:420px;
+background:#ff3ea5;
+left:-120px;
+top:120px;
+}
+
+.nebula2 {
+width:500px;
+height:500px;
+background:#6b5cff;
+right:-180px;
+bottom:-50px;
+animation-delay:8s;
+}
+
+/* =====================================================
+                  SOL
+=====================================================*/
+.sol{
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:#020202;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:
+    0 0 35px #ffd54f,
+    0 0 70px rgba(255,215,0,.45),
+    0 0 120px rgba(255,0,170,.18);
+    z-index:100;
+}
+
+/* linhas douradas */
+.linhas-sol{
+position:absolute;
+width:100%;
+height:100%;
+border-radius:50%;
+background:
+repeating-radial-gradient(circle, transparent 0px, transparent 8px, rgba(255,215,0,.18) 10px, rgba(255,215,0,.30) 13px);
+animation:solRotate 20s linear infinite;
+}
+
+/* =====================================================
+          CORAÇÃO GIGANTE
+=====================================================*/
+.heart-central{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-170px);
+font-size:120px;
+z-index:120;
+filter:
+drop-shadow(0 0 30px #ff3ea5)
+drop-shadow(0 0 60px #ff3ea5);
+animation:heartBeat 2s infinite;
+}
+
+/* =====================================================
+                ÓRBITAS
+=====================================================*/
+.orbit{
+    position:absolute;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    animation:rotateOrbit linear infinite;
+    pointer-events:none;
+    transform-origin: center;
+    z-index: 10;
+}
+
+
+/* tamanhos */
+.orbit1{
+width:260px;
+height:260px;
+animation-duration:10s;
+}
+
+.orbit2{
+width:360px;
+height:360px;
+animation-duration:14s;
+}
+
+.orbit3{
+width:470px;
+height:470px;
+animation-duration:18s;
+}
+
+.orbit4{
+width:580px;
+height:580px;
+animation-duration:22s;
+}
+
+.orbit5{
+width:690px;
+height:690px;
+animation-duration:26s;
+}
+
+.orbit6{
+width:800px;
+height:800px;
+animation-duration:30s;
+}
+
+.orbit7{
+width:910px;
+height:910px;
+animation-duration:34s;
+}
+
+.orbit8{
+width:1000px;
+height:1000px;
+animation-duration:38s;
+}
+
+/* =====================================================
+              PLANETAS
+=====================================================*/
+.planet{
+    position:absolute;
+    top:-38px;
+    cursor:pointer;
+    transition:.5s;
+    z-index: 50;
+    pointer-events: auto;
+    animation: counterRotate 8s linear infinite;
+}
+
+.planet img{
+width:82px;
+height:82px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid white;
+box-shadow:0 0 25px rgba(255,255,255,.5);
+transition:.5s;
+}
+
+.planet:hover{
+transform:scale(1.25);
+z-index:300;
+}
+
+.planet:hover img{
+    transform: 
+    scale(1.25)
+    translateZ(40px);
+    box-shadow: 0 0 35px #ff4da6, 0 0 70px #ff4da6;
+}
+
+/* =====================================================
+      BRILHO DOS PLANETAS
+=====================================================*/
+.planet::after{
+content:"";
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+width:90px;
+height:90px;
+border-radius:50%;
+background:rgba(255,255,255,.10);
+filter:blur(20px);
+z-index:-1;
+}
+
+/* =====================================================
+             ANIMAÇÕES
+=====================================================*/
+@keyframes counterRotate{
+    from{
+    transform: rotate(-50deg);
+    /*rotateX(70deg)
+    rotateZ(0deg);*/
+    }
+
+    to{
+    transform: rotate(-50deg); 
+   /*rotatex(70deg)
+    rotatez(360deg);*/
+    }
+}
+
+@keyframes rotateOrbit{
+    from{
+    transform: rotate (0deg); 
+    }
+
+    to{
+    transform: rotate(360deg); 
+
+    }
+}
+
+@keyframes heartBeat{
+    0%{
+    transform:translate(-50%,-170px) scale(1);
+    }
+    50%{
+    transform:translate(-50%,-170px) scale(1.18);
+    }
+    100%{
+    transform:translate(-50%,-170px) scale(1);
+    }
+}
+
+@keyframes solRotate{
+    from{
+        transform: rotate (0deg); 
+
+    /*transform:
+        rotateX(70deg)
+        rotateZ(0deg); */
+    }
+    to{
+      transform:rotate(360deg);
+
+        /*transform:
+        rotatex(70deg)
+        rotatez(360deg);*/
+    }
+}
+
+@keyframes nebulaMove{
+    0%{
+    transform:translate(0,0);
+    }
+    50%{
+    transform:translate(40px,-30px);
+    }
+    100%{
+    transform:translate(0,0);
+    }
+}
+
+@keyframes estrelas{
+    from{
+    transform:translate(0,0);
+    }
+
+    to{
+    transform:translateY(-400px);
+    }
+}
+
+@keyframes twinkling{
+    0%, 100%{
+    opacity: 0.8; transform: scale(1);
+    }
+    50%{
+    opacity: 0.3; transform: scale(1.3);
+    }
+}
+
+@keyframes dust{
+    from{
+    transform: rotate(0deg);
+    }
+    to{
+    transform: rotate(360deg);
+    }
+}
+
+/* =====================================================
+        GLASSMORPHISM - CARDS DE SENTIMENTOS
+=====================================================*/
+.glass{
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 25px;
+}
+
+.footer{
+    margin-top: 100%;
+    padding: 35px;
+    text-align: center;
+    background: rgba(255,255,255,.05);
+    backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.footer p{
+    color: #bbb;
+    font-size: 15px;
+}
+
+#sentimentos{
+padding:40px 0 80px;
+margin: auto;
+max-width: 1200px;
+text-align:center;
+width:90%;
+}
+
+.cards{
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.06);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.12);
+border-radius:25px;
+padding:35px;
+cursor:pointer;
+transition:.4s;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 0 40px rgba(255,77,166,.35);
+}
+
+.card h2{
+margin-bottom: 15px;
+font-size:22px;
+}
+
+.card p{
+line-height: 28px;
+color:#ccc;
+}
+
+.emoji{
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+/* brilho interno */
+.card::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background:radial-gradient(circle,rgba(255,255,255,.15),transparent 60%);
+top:-50%;
+left:-50%;
+opacity:0;
+transition:.4s;
+}
+
+.card:hover::before{
+opacity:1;
+}
+
+.frase-amor{
+    width: 90%;
+    max-width: 900px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.frase-amor h2{
+    font-size: 34px;
+    line-height: 55px;
+    font-weight: 600;
+}
+
+/* =====================================================
+        GALERIA ANIMADA
+=====================================================*/
+#galeria{
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+    padding-bottom: 100px;
+    text-align:center;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.foto{
+    overflow:hidden;
+    border-radius:20px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.foto img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.foto:hover img{
+transform:scale(1.12);
+}
+
+.foto:hover::after{
+
+opacity:1;
+
+}
+
+/* =====================================================
+        CONTACTO FUTURISTA
+=====================================================*/
+
+#contacto{
+    width: 90%;
+    max-width: 700px;
+    margin: 60px auto;
+    padding:120px 10%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.contact-container{
+    padding:45px;
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(20px);
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+    box-shadow:0 0 60px rgba(255,77,166,.08);
+
+}
+
+.contact-container input, .contact-container textarea{
+    width:100%;
+    font-size:16px;
+    margin-bottom:20px;
+    color:#ccc;
+    outline:none;
+    border-radius:15px;
+    padding:16px;
+    border: none;
+    background:rgba(255,255,255,.08);
+}
+
+.contact-container textarea{
+    resize: none;
+}
+
+.contact-container button{
+width:100%;
+padding:18px;
+border:none;
+border-radius:40px;
+background:linear-gradient(90deg,#ff4da6,#8b5cf6);
+color:white;
+font-size:18px;
+font-weight: 600;
+transition:.35s;
+
+}
+
+.contact-container button:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 35px rgba(255,77,166,.4)5;
+}
+
+/* =====================================================
+        MODAL DOS PLANETAS
+=====================================================*/
+
+.modal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.75);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.modal-content{
+width:90%;
+max-width:500px;
+padding:40px;
+border-radius:20px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(25px);
+text-align:center;
+border:1px solid rgba(255,255,255,.2);
+animation:fadeUp .5s;
+}
+
+#close-modal{
+position:absolute;
+top:20px;
+right:30px;
+font-size:30px;
+cursor:pointer;
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+}
+
+}
+
+
+/* =====================================================
+        LIGHTBOX
+=====================================================*/
+#lightbox{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:99999;
+}
+
+#lightbox img{
+max-width:900px;
+width: 90%;
+border-radius:20px;
+}
+
+#close-lightbox{
+    position: absolute;
+    top: 35px;
+    right: 40px;
+    font-size: 45px;
+    cursor: pointer;
+}
+/* =====================================================
+        BOTÃO TOPO
+=====================================================*/
+
+#btn-topo{
+
+position:fixed;
+
+bottom:120px;
+
+right:25px;
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+border:none;
+
+background:linear-gradient(135deg,#ff4da6,#8b5cf6);
+
+color:white;
+
+cursor:pointer;
+
+display:none;
+
+}
+
+/* =====================================================
+        CURSOR
+=====================================================*/
+
+#cursor{
+position:fixed;
+width:20px;
+height:20px;
+border-radius:50%;
+background:#ff4da6;
+pointer-events:none;
+mix-blend-mode:screen;
+z-index:99999;
+transform:translate(-50%,-50%);
+box-shadow:0 0 20px #ff4da6;
+}
+
+/* =====================================================
+        REDES
+=====================================================*/
+.redes{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 35px;
+}
+
+.social-icons a{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: rgba(255,255,255,.08);
+    color: white;
+    font-size: 28px;
+    transition: .35s;
+}
+
+.social-icons a:hover{
+    background: #ff4da6;
+    transform: translateY(-8px);
+}
+/* =====================================================
+        RESPONSIVIDADE
+=====================================================*/
+@media(max-width:1024px){
+    .hero h1{
+    font-size:70px;
+    }
+
+    .universo{
+    transform:scale(.75);
+    }
+}
+
+@media(max-width:768px){
+    #header{
+    flex-direction:column;
+    gap: 20px;
+    padding: 20px;
+    }
+
+    .nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        font-size: 45px;
+    }
+
+    .hero h1{
+    font-size:45px;
+    line-height:55px;
+    }
+
+    .hero p{
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .titulo{
+        font-size: 42px;
+    }
+
+    .frase-amor h2{
+        font-size: 26px;
+        line-height: 40px;
+    }
+    .universo{
+    transform:scale(.55);
+    }
+}
+
+@media(max-width:480px){
+    .logo{
+        font-size: 22px;
+    }
+
+    .hero h1{
+    font-size:35px;
+    }
+
+    .hero-button{
+        padding: 15px 35px;
+    }
+
+    .contact-container{
+    padding:25px;
+    }
+
+    .social-icons a{
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    .universo{
+        transform: scale(.42);
+    }
+}

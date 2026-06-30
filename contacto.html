@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+<!-- EFEITO DE TRANSIÇÃO -->
+<div id="transition"></div>
+
+    <!-- MENU -->
+<header>
+
+    <div class="logo">
+
+        ❤️ 05/07/20026 🎉
+
+    </div>
+
+    <nav>
+        <ul>
+            <li><a class="page-link" href="index.html">Início</a></li>
+
+            <li><a class="page-link" href="galaxia.html">Galáxia</a></li>
+
+            <li><a class="page-link" href="sentimentos.html">Sentimentos</a></li>
+
+            <li><a class="page-link" href="momentos.html">Momentos</a></li>
+
+            <li><a class="page-link" href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- TÍTULO -->
+<section class="titulo">
+    <h1>
+
+        Entre em Contacto ❤️
+
+    </h1>
+
+    <p>
+
+        Toda grande história começa com uma simples mensagem.
+
+    </p>
+</section>
+
+<!-- FORMULÁRIO -->
+<section id="contacto">
+    <div class="contact-container">
+        <form>
+            <input
+            type="text"
+            placeholder="O teu nome"
+            required>
+
+            <input
+            type="email"
+            placeholder="O teu e-mail"
+            required>
+
+            <textarea
+            rows="7"
+            placeholder="Escreve uma mensagem..."
+            required></textarea>
+
+            <button type="submit">
+
+            Enviar ❤️
+
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- REDES SOCIAIS -->
+<section class="redes">
+    <h2>
+
+        Segue-me
+
+    </h2>
+
+    <div class="social-icons">
+        <a href="#">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-facebook"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <a href="#">
+            <i class="fab fa-github"></i>
+        </a>
+    </div>
+</section>
+
+<!-- FRASE -->
+<section class="frase-amor">
+    <h2>
+
+    "Mesmo quando a distância existe,
+    o amor encontra um caminho."
+
+    ❤️
+
+    </h2>
+</section>
+
+<footer>
+    <p>
+
+    ❤️ Universo do Amor © 2026
+
+    </p>
+</footer>
+
+<div id="music-player">
+    <button id="playPause">
+        <i class="fa-solid fa-play"></i>
+    </button>
+
+    <div class="music-info">
+        <h3>Música favorita</h3>
+
+        <div class="barra">
+            <div class="progresso"></div>
+        </div>
+    </div>
+
+    <input type="range"
+           id="volume"
+           min="0"
+           max="100"
+           value="50">
+</div>
+<audio id="musica" loop>
+    <source
+        src="audio/musica.mp3"
+        type="audio/mp3">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
