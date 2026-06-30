@@ -137,7 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =====================================================
             ENTRAR NO SITE
     =====================================================*/
-    if(btnEntrar){
         btnEntrar.addEventListener("click", () => {
 
             loadingScreen.style.opacity = "0";
@@ -149,7 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
             musica.volume = 0.5;
             musica.play();
         });
-    }
 
     const heroButton = document.querySelector(".hero-button");
     if(heroButton){
